@@ -1,12 +1,12 @@
 <template>
   <nav>
-    <v-app-bar color="grey lighten-4" flat >
-      <v-app-bar-nav-icon
-        @click="toggleDrawer()"
-      >
-      </v-app-bar-nav-icon>
+    <v-app-bar color="grey lighten-4" flat>
+      <v-app-bar-nav-icon @click="toggleDrawer()"> </v-app-bar-nav-icon>
       <v-toolbar-title>
-        Todo Application
+        <span class="font-weight-medium brown--text text--brown-lighten-2"
+          >Todo</span
+        >
+        <span>Application</span>
       </v-toolbar-title>
     </v-app-bar>
   </nav>
@@ -14,16 +14,13 @@
 
 <script>
 export default {
-    data() {
-        return{
-
-        };
+  data() {
+    return {};
+  },
+  methods: {
+    toggleDrawer() {
+      this.$emit("appDrawerToggled");
     },
-    methods:{
-        toggleDrawer(){
-            this.$emit("appDrawerTogglesd");
-        }
-    }
-
+  },
 };
 </script>
