@@ -1,6 +1,7 @@
 <template>
   <v-app>
     <Navbar />
+    <Drawer />
     <v-main>
       <router-view />
     </v-main>
@@ -9,10 +10,11 @@
 
 <script>
 import Navbar from "@/components/Navbar.vue";
+import Drawer from "@/components/Drawer.vue";
 
 export default {
   name: "App",
-  components: { Navbar },
+  components: { Navbar, Drawer },
   data() {
     return {};
   },
