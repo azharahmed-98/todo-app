@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <Navbar />
+    <Navbar :nav-config = "navConfig"/>
     <Drawer />
     <v-main>
       <router-view />
@@ -16,7 +16,11 @@ export default {
   name: "App",
   components: { Navbar, Drawer },
   data() {
-    return {};
+    return {
+      "navConfig":{
+        showDrawerButton: true,
+      }
+    };
   },
 };
 </script>

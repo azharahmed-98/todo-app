@@ -1,6 +1,11 @@
 <template>
   <div>
-    <v-navigation-drawer v-model="drawer">
+    <v-navigation-drawer
+      v-model="drawer"
+      app
+      dark
+      class="appDrawer elevation-1 white--text"
+    >
       Hello
     </v-navigation-drawer>
   </div>

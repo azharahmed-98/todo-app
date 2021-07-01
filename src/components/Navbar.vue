@@ -1,13 +1,21 @@
 <template>
   <nav>
-    <v-app-bar color="grey lighten-4" flat>
-      <v-app-bar-nav-icon @click="toggleDrawer()"> </v-app-bar-nav-icon>
-      <v-toolbar-title class="text-uppercase">
+    <v-app-bar 
+      app 
+      color="grey lighten-4" 
+      class="nav__header"
+    >
+      <v-app-bar-nav-icon 
+        v-if="showDrawerButton"
+        @click="toggleDrawer()"
+      >
+      </v-app-bar-nav-icon>
+      <v-app-bar-title class="text-uppercase">
         <span class="font-weight-medium brown--text text--brown-lighten-2"
           >Todo</span
         >
         <span>Application</span>
-      </v-toolbar-title>
+      </v-app-bar-title>
       <v-spacer></v-spacer>
       <v-btn depressed>
         Sign Out
@@ -24,7 +32,15 @@ import { bus } from "../main";
 
 export default {
   data() {
-    return {};
+    return {
+      showDrawerButton: this.navConfig.showDrawerButton
+    };
+  },
+  props:{
+    "navConfig":{
+      type: Object,
+      required: true
+    }
   },
   methods: {
     toggleDrawer() {
