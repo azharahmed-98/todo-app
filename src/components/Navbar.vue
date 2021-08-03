@@ -1,17 +1,10 @@
 <template>
   <nav>
-    <v-app-bar 
-      app 
-      color="grey lighten-4" 
-      class="nav__header"
-    >
-      <v-app-bar-nav-icon 
-        v-if="showDrawerButton"
-        @click="toggleDrawer()"
-      >
+    <v-app-bar app flat>
+      <v-app-bar-nav-icon v-if="showDrawerButton" @click="toggleDrawer()">
       </v-app-bar-nav-icon>
-      <v-app-bar-title class="text-uppercase">
-        <span class="font-weight-medium brown--text text--brown-lighten-2"
+      <v-app-bar-title>
+        <span class="font-weight-medium pink--text text-pink accent-2 text-uppercase"
           >Todo</span
         >
         <span>Application</span>
@@ -33,14 +26,14 @@ import { bus } from "../main";
 export default {
   data() {
     return {
-      showDrawerButton: this.navConfig.showDrawerButton
+      showDrawerButton: this.navConfig.showDrawerButton,
     };
   },
-  props:{
-    "navConfig":{
+  props: {
+    navConfig: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
   methods: {
     toggleDrawer() {

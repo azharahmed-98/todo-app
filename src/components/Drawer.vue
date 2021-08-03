@@ -3,8 +3,7 @@
     <v-navigation-drawer
       v-model="drawer"
       app
-      dark
-      class="appDrawer elevation-1 white--text"
+      flat
     >
       Hello
     </v-navigation-drawer>
