@@ -1,10 +1,10 @@
 <template>
   <nav>
-    <v-app-bar app flat>
+    <v-app-bar app flat height="60px">
       <v-app-bar-nav-icon v-if="showDrawerButton" @click="toggleDrawer()">
       </v-app-bar-nav-icon>
       <v-app-bar-title>
-        <span class="font-weight-medium pink--text text-pink accent-2 text-uppercase"
+        <span class="font-weight-medium primary--text text-uppercase"
           >Todo</span
         >
         <span>Application</span>
@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import { bus } from "../main";
+import eventBus from "../main";
 
 export default {
   data() {
@@ -37,7 +37,7 @@ export default {
   },
   methods: {
     toggleDrawer() {
-      bus.$emit("appDrawerToggled");
+      eventBus.$emit("appDrawerToggled");
     },
   },
 };
