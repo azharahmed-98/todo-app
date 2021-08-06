@@ -1,7 +1,7 @@
 <template>
   <v-navigation-drawer v-model="drawer" app color="primary" dark>
     <v-list dense>
-      <v-list-item v-for="(item, i) in items" :key="i" router :to="item.route">
+      <v-list-item v-for="item in items" :key="item.text" router :to="item.route">
         <v-list-item-icon>
           <v-icon v-text="item.icon"></v-icon>
         </v-list-item-icon>
@@ -38,7 +38,11 @@ export default {
           name: "Projects",
           route: "/projects",
         },
-        { icon: "mdi-account", text: "Team", name: "Team", route: "/team" },
+        { icon: "mdi-account",
+          text: "Team",
+          name: "Team",
+          route: "/team"
+        },
       ],
     };
   },
