@@ -1,6 +1,9 @@
 <template>
   <div class="teams">
-    <p>This is the teams page.</p>
+    <h1 class="subtitle-1 grey--text">Team</h1>
+    <v-container class="my-5">
+      content
+    </v-container>
   </div>
 </template>
 

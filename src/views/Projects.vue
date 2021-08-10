@@ -1,5 +1,8 @@
 <template>
   <div class="projects">
-    <p>This is an projects page</p>
+    <h1 class="subtitle-1 grey--text">Projects</h1>
+    <v-container class="my-5">
+      content
+    </v-container>
   </div>
 </template>

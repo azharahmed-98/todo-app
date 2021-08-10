@@ -2,9 +2,9 @@
   <v-app>
     <Navbar :nav-config = "navConfig"/>
     <Drawer />
-    <v-main>
+    <v-content class="mx-4 mt-2 mb-4">
       <router-view />
-    </v-main>
+    </v-content>
   </v-app>
 </template>
 
