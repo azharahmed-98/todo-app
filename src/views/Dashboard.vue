@@ -18,7 +18,7 @@
               by project name
             </v-btn>
           </template>
-          <span>Tooltip</span>
+          <span>Sort Projects by Project Name</span>
         </v-tooltip>
         <v-tooltip top>
           <template v-slot:activator="{ on }">
@@ -27,14 +27,14 @@
               text
               small
               v-on="on"
-              @click="sortBy('title')"
+              @click="sortBy('person')"
               class="text-lowercase"
             >
               <v-icon left small>mdi-account</v-icon>
               by person
             </v-btn>
           </template>
-          <span>Tooltip</span>
+          <span>Sort Projects by Person</span>
         </v-tooltip>
       </v-row>
       <v-card v-for="(project, index) in projects" :key="index">
