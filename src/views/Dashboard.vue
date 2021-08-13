@@ -117,7 +117,7 @@ export default {
 
 <style scoped>
 .project.complete {
-  border-left: 4px solid lightgreen;
+  border-left: 4px solid #43A047;
 }
 
 .project.ongoing {
@@ -129,7 +129,7 @@ export default {
 }
 
 .v-chip.complete {
-  background: lightgreen !important;
+  background: #43A047 !important;
 }
 
 .v-chip.ongoing {
