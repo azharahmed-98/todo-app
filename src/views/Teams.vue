@@ -13,8 +13,8 @@
         >
           <v-card class="text-center">
             <v-responsive class="pt-4">
-              <v-avatar>
-                
+              <v-avatar size="100" color="primary">
+                <img :src="person.avatar" alt="Avatar">
               </v-avatar>
             </v-responsive>
             <v-card-text>
@@ -41,10 +41,10 @@ export default {
   data() {
     return {
       teams: [
-        { name: "Azhar Ahmed A", role: "Web Developer" },
-        { name: "Narendar Singh", role: "Digital Marketer" },
-        { name: "Adnan Zaid", role: "Graphics Designer" },
-        { name: "Parvez", role: "UX Developer" },
+        { name: "Azhar Ahmed A", role: "Web Developer", avatar: '/avatar-1.png' },
+        { name: "Narendar Singh", role: "Digital Marketer", avatar: '/avatar-2.png' },
+        { name: "Adnan Zaid", role: "Graphics Designer", avatar: '/avatar-3.png' },
+        { name: "Parvez", role: "UX Developer", avatar: '/avatar-4.png' },
       ],
     };
   },

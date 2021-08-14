@@ -1,7 +1,20 @@
 <template>
   <v-navigation-drawer v-model="drawer" app color="primary" dark>
+    <v-row class="mt-5 text-center">
+        <v-col>
+          <v-avatar size="100" color="white">
+            <img src="/avatar-1.png" />
+          </v-avatar>
+          <p class="subheading mt-2 white--text">Azhar Ahmed A</p>
+        </v-col>
+      </v-row>
     <v-list dense>
-      <v-list-item v-for="item in items" :key="item.text" router :to="item.route">
+      <v-list-item
+        v-for="item in items"
+        :key="item.text"
+        router
+        :to="item.route"
+      >
         <v-list-item-icon>
           <v-icon v-text="item.icon"></v-icon>
         </v-list-item-icon>
@@ -38,11 +51,7 @@ export default {
           name: "Projects",
           route: "/projects",
         },
-        { icon: "mdi-account",
-          text: "Team",
-          name: "Team",
-          route: "/team"
-        },
+        { icon: "mdi-account", text: "Team", name: "Team", route: "/team" },
       ],
     };
   },
