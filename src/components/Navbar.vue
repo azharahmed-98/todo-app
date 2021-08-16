@@ -10,6 +10,28 @@
         <span>Application</span>
       </v-app-bar-title>
       <v-spacer></v-spacer>
+      <v-menu offset-y>
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn text small v-bind="attrs" v-on="on">
+            <v-icon small>
+              mdi-chevron-down
+            </v-icon>
+            <span class="hidden-sm-and-down">
+              Menu
+            </span>
+          </v-btn>
+        </template>
+        <v-list>
+          <v-list-item
+            v-for="(item, index) in items"
+            :key="index"
+            router
+            :to="item.route"
+          >
+            <v-list-item-title>{{ item.text }}</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
       <v-tooltip bottom>
         <template v-slot:activator="{ on }">
           <v-btn text small @click="changeTheme()" v-on="on">
@@ -46,6 +68,21 @@ export default {
     return {
       showDrawerButton: this.navConfig.showDrawerButton,
       theme: "",
+      items: [
+        {
+          icon: "mdi-view-dashboard",
+          text: "Dashboard",
+          name: "Dashboard",
+          route: "/",
+        },
+        {
+          icon: "mdi-folder",
+          text: "Projects",
+          name: "Projects",
+          route: "/projects",
+        },
+        { icon: "mdi-account", text: "Team", name: "Team", route: "/team" },
+      ],
     };
   },
   props: {
