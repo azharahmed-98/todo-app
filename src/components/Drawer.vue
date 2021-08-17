@@ -8,6 +8,9 @@
         <p class="subheading mt-2 white--text">Azhar Ahmed A</p>
       </v-col>
     </v-row>
+    <v-row justify="center" align-content="center" class="my-4">
+      <Modal />
+    </v-row>
     <v-list dense>
       <v-list-item
         v-for="item in items"
@@ -28,8 +31,11 @@
 
 <script>
 import eventBus from "../main";
+import Modal from '@/components/Modal'
 
 export default {
+  name: 'Drawer',
+  components:{ Modal },
   created() {
     eventBus.$on("appDrawerToggled", () => {
       this.drawer = !this.drawer;

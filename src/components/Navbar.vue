@@ -64,6 +64,7 @@
 import eventBus from "../main";
 
 export default {
+  name: 'Navbar',
   data() {
     return {
       showDrawerButton: this.navConfig.showDrawerButton,
